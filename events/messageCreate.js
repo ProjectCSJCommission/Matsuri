@@ -17,6 +17,7 @@ module.exports = {
 			];
 			return message.reply(
 				{
+					allowedMentions: { repliedUser: false },
 					content: `${RandomMorning[Math.floor(Math.random() * RandomMorning.length)]}`,
 					ephemeral: false,
 				},
@@ -35,6 +36,7 @@ module.exports = {
 			];
 			return message.reply(
 				{
+					allowedMentions: { repliedUser: false },
 					content: `${RandomMorning[Math.floor(Math.random() * RandomMorning.length)]}`,
 					ephemeral: false,
 				},
@@ -47,7 +49,12 @@ module.exports = {
 				'不要',
 				'再說',
 			];
-			return message.reply({ content: `${RandomMorning[Math.floor(Math.random() * RandomMorning.length)]}`, ephemeral: false });
+			return message.reply(
+				{
+					allowedMentions: { repliedUser: false },
+					content: `${RandomMorning[Math.floor(Math.random() * RandomMorning.length)]}`,
+					ephemeral: false,
+				});
 		}
 	},
 };
