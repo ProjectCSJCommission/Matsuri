@@ -42,7 +42,10 @@ module.exports = {
 				},
 			);
 		}
-		if (message.content.match('起來嗨') != null) {
+		if (
+			message.content.match('起來嗨') != null ||
+			message.content.match('嗨起來') != null
+		) {
 			const RandomMorning =
 			[
 				'去睡覺',
