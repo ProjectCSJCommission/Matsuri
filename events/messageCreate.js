@@ -27,7 +27,7 @@ module.exports = {
 			return message.reply(
 				{
 					allowedMentions: { repliedUser: false },
-					content: messageMemberNick + RandomMessage[Math.floor(Math.random() * RandomMessage.length)],
+					content: /* messageMemberNick + */RandomMessage[Math.floor(Math.random() * RandomMessage.length)],
 					ephemeral: false,
 				},
 			);
@@ -51,7 +51,7 @@ module.exports = {
 			return message.reply(
 				{
 					allowedMentions: { repliedUser: false },
-					content: messageMemberNick + RandomMessage[Math.floor(Math.random() * RandomMessage.length)],
+					content: /* messageMemberNick + */ RandomMessage[Math.floor(Math.random() * RandomMessage.length)],
 					ephemeral: false,
 				},
 			);
