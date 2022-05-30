@@ -23,7 +23,7 @@ module.exports = {
 			return message.reply(
 				{
 					allowedMentions: { repliedUser: false },
-					content: `${interaction.user.name}${RandomMorning[Math.floor(Math.random() * RandomMorning.length)]}`,
+					content: `${message.user.name}${RandomMorning[Math.floor(Math.random() * RandomMorning.length)]}`,
 					ephemeral: false,
 				},
 			);
@@ -47,7 +47,7 @@ module.exports = {
 			return message.reply(
 				{
 					allowedMentions: { repliedUser: false },
-					content: `${interaction.user.name}${RandomMorning[Math.floor(Math.random() * RandomMorning.length)]}`,
+					content: `${message.user.name}${RandomMorning[Math.floor(Math.random() * RandomMorning.length)]}`,
 					ephemeral: false,
 				},
 			);
