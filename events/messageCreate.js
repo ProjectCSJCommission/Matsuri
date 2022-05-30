@@ -3,6 +3,9 @@ module.exports = {
 	once: false,
 	async execute(message) {
 		if (message.author.bot) return;
+		const messageMember = message.guild.members.cache.find((user) => user.id === message.author.id);
+		let messageMemberNick = messageMember.nickname;
+		if (messageMemberNick === null) messageMemberNick = message.author.username;
 		if
 		(
 			//  日文觸發詞
@@ -20,7 +23,7 @@ module.exports = {
 				'おはよう～♪',
 				'早安呀～♪',
 			];
-			return message.reply(
+			message.reply(
 				{
 					allowedMentions: { repliedUser: false },
 					content: `${message.author.username}${RandomMorning[Math.floor(Math.random() * RandomMorning.length)]}`,
@@ -44,7 +47,7 @@ module.exports = {
 				'おやすみ～♪',
 				'晚安呀～♪',
 			];
-			return message.reply(
+			message.reply(
 				{
 					allowedMentions: { repliedUser: false },
 					content: `${message.author.username}${RandomMorning[Math.floor(Math.random() * RandomMorning.length)]}`,
@@ -62,7 +65,7 @@ module.exports = {
 				'不要',
 				'再說',
 			];
-			return message.reply(
+			message.reply(
 				{
 					allowedMentions: { repliedUser: false },
 					content: `${RandomMorning[Math.floor(Math.random() * RandomMorning.length)]}`,
