@@ -6,8 +6,7 @@ module.exports = {
 		const messageMember = message.guild.members.cache.find((user) => user.id === message.author.id);
 		let messageMemberNick = messageMember.nickname;
 		if (messageMemberNick === null) messageMemberNick = message.author.username;
-		if
-		(
+		if (
 			//  日文觸發詞
 			message.content === 'まつりおはよう' ||
 			message.content === 'おはよう' ||
@@ -23,7 +22,7 @@ module.exports = {
 				'おはよう～♪',
 				'早安呀～♪',
 			];
-			message.reply(
+			return message.reply(
 				{
 					allowedMentions: { repliedUser: false },
 					content: `${messageMemberNick}${RandomMorning[Math.floor(Math.random() * RandomMorning.length)]}`,
@@ -47,7 +46,7 @@ module.exports = {
 				'おやすみ～♪',
 				'晚安呀～♪',
 			];
-			message.reply(
+			return message.reply(
 				{
 					allowedMentions: { repliedUser: false },
 					content: `${messageMemberNick}${RandomMorning[Math.floor(Math.random() * RandomMorning.length)]}`,
@@ -65,7 +64,7 @@ module.exports = {
 				'不要',
 				'再說',
 			];
-			message.reply(
+			return message.reply(
 				{
 					allowedMentions: { repliedUser: false },
 					content: `${RandomMorning[Math.floor(Math.random() * RandomMorning.length)]}`,
