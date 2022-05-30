@@ -19,7 +19,7 @@ module.exports = {
 			message.content === '祭おはよう' ||
 			message.content === 'まつり早安'
 		) {
-			const RandomMorning =
+			const RandomMessage =
 			[
 				'おはよう～♪',
 				'早安呀～♪',
@@ -27,7 +27,7 @@ module.exports = {
 			return message.reply(
 				{
 					allowedMentions: { repliedUser: false },
-					content: `${messageMemberNick}${RandomMorning[Math.floor(Math.random() * RandomMorning.length)]}`,
+					content: messageMemberNick + RandomMessage[Math.floor(Math.random() * RandomMessage.length)],
 					ephemeral: false,
 				},
 			);
@@ -43,7 +43,7 @@ module.exports = {
 			message.content === '祭おやすみ' ||
 			message.content === 'まつり晚安'
 		) {
-			const RandomMorning =
+			const RandomMessage =
 			[
 				'おやすみ～♪',
 				'晚安呀～♪',
@@ -51,7 +51,7 @@ module.exports = {
 			return message.reply(
 				{
 					allowedMentions: { repliedUser: false },
-					content: `${messageMemberNick}${RandomMorning[Math.floor(Math.random() * RandomMorning.length)]}`,
+					content: messageMemberNick + RandomMessage[Math.floor(Math.random() * RandomMessage.length)],
 					ephemeral: false,
 				},
 			);
@@ -60,7 +60,7 @@ module.exports = {
 			message.content.match('起來嗨') != null ||
 			message.content.match('嗨起來') != null
 		) {
-			const RandomMorning =
+			const RandomMessage =
 			[
 				'去睡覺',
 				'不要',
@@ -69,7 +69,7 @@ module.exports = {
 			return message.reply(
 				{
 					allowedMentions: { repliedUser: false },
-					content: `${RandomMorning[Math.floor(Math.random() * RandomMorning.length)]}`,
+					content: RandomMessage[Math.floor(Math.random() * RandomMessage.length)],
 					ephemeral: false,
 				});
 		}
