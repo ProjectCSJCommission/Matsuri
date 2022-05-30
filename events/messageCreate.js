@@ -5,15 +5,20 @@ module.exports = {
 		if (message.author.bot) return;
 		if
 		(
+			//  日文觸發詞
 			message.content === 'まつりおはよう' ||
+			message.content === 'おはよう' ||
+			// 中文觸發詞
+			message.content === '祭早安' ||
+			message.content === '早安' ||
+			// 中日混和觸發詞
 			message.content === '祭おはよう' ||
-			message.content === 'まつり早安' ||
-			message.content === '祭早安'
+			message.content === 'まつり早安'
 		) {
 			const RandomMorning =
 			[
-				'おはよう！',
-				'早安呀～',
+				'おはよう～♪',
+				'早安呀～♪',
 			];
 			return message.reply(
 				{
@@ -24,15 +29,20 @@ module.exports = {
 			);
 		}
 		if (
+			//  日文觸發詞
 			message.content === 'まつりおやすみ' ||
+			message.content === 'おやすみ' ||
+			// 中文觸發詞
+			message.content === '祭晚安' ||
+			message.content === '晚安',
+			// 中日混和觸發詞
 			message.content === '祭おやすみ' ||
-			message.content === 'まつり晚安' ||
-			message.content === '祭晚安'
+			message.content === 'まつり晚安'
 		) {
 			const RandomMorning =
 			[
-				'おやすみ！',
-				'晚安呀～',
+				'おやすみ～♪',
+				'晚安呀～♪',
 			];
 			return message.reply(
 				{
