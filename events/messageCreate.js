@@ -26,7 +26,7 @@ module.exports = {
 			message.reply(
 				{
 					allowedMentions: { repliedUser: false },
-					content: `${message.author.username}${RandomMorning[Math.floor(Math.random() * RandomMorning.length)]}`,
+					content: `${messageMemberNick}${RandomMorning[Math.floor(Math.random() * RandomMorning.length)]}`,
 					ephemeral: false,
 				},
 			);
@@ -50,7 +50,7 @@ module.exports = {
 			message.reply(
 				{
 					allowedMentions: { repliedUser: false },
-					content: `${message.author.username}${RandomMorning[Math.floor(Math.random() * RandomMorning.length)]}`,
+					content: `${messageMemberNick}${RandomMorning[Math.floor(Math.random() * RandomMorning.length)]}`,
 					ephemeral: false,
 				},
 			);
